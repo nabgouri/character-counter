@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import "tailwindcss";
+/* @import characterShape from "./assets/Characters-card-shape.svg"; */
+@theme {
+  --font-family: "DM Sans", "sans-serif";
+  --color-background: var(--backgound);
+  --color-text-area: var(--text-area);
+  --color-stroke: var(--stroke);
+  --color-text: var(--text);
+  --color-title: var(--title);
+}
+
+.dark {
+  --backgound: #12131a;
+  --text-area: hsl(235, 14%, 15%);
+  --stroke: #2a2b37;
+  --text: #e4e4ef;
+  --title: #f2f2f7;
+}
+.light {
+  --backgound: #ffff;
+  --text-area: #f2f2f7;
+  --stroke: #e4e4ef;
+  --text: #2a2b37;
+  --title: #12131a;
+}
+.overlay-shape > li:first-child::after {
+  content: url("src/assets/Characters-card-shape.svg");
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.overlay-shape > li:nth-child(2)::after {
+  content: url("src/assets/WordsCount-card-shape.svg");
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.overlay-shape > li:last-child::after {
+  content: url("src/assets/sentenceCount-card-shape.svg");
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+#limitError {
+  border-color: #fe8159;
+}
