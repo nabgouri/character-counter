@@ -6,10 +6,10 @@ export default function StatsCard({ stat }) {
       className={`px-5 py-[27px] rounded-xl relative w-full   `}
       style={{ backgroundColor: `${backgroundColor}` }}
     >
-      <span className="text-background text-[2.5rem]/[100%] md:text-[4rem]/[100%] font-bold ">
+      <span className="text-[#12131a] text-[2.5rem]/[100%] md:text-[4rem]/[100%] font-bold ">
         {statValue}
       </span>
-      <h2 className="text-xl/[140%] -tracking-[0.6px] text-background mt-2">
+      <h2 className="text-xl/[140%] -tracking-[0.6px] text-[#12131a] mt-2">
         {statTitle}
       </h2>
     </li>
