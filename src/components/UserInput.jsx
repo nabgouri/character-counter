@@ -91,9 +91,9 @@ export default function UserInput({ setStatsData, statsData }) {
         placeholder="Start typing here… (or paste your text)"
         className="w-full bg-text-area h-[12.5rem] placeholder:text-text placeholder:text-wrap border-2 rounded-[12px] border-stroke text-text text-[1.25rem]/[140%] p-4  focus:border-[#C27CF8] focus-visible:outline-none "
       ></textarea>
-      {statsData.totalCharNum === CharacterLimit.CharacterLimitNum && (
+      {statsData.totalCharNum >= CharacterLimit.CharacterLimitNum && CharacterLimit.CharacterLimitNum > 0 &&  (
         <span className="text-[#FE8159] text-base/[130%]">
-          Limit reached! Your text exceeds 300 characters.
+          Limit reached! Your text exceeds {CharacterLimit.CharacterLimitNum} characters.
         </span>
       )}
       <div className="mt-4 mb-10 flex flex-col gap-y-3 md:flex-row md:items-center md:justify-between  ">
